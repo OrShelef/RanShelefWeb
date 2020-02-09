@@ -6,7 +6,7 @@
    
 </video> 
 <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="0px">
-  <mat-toolbar [ngStyle]="{'background-color': expression}">
+  <mat-toolbar >
     <span style="transform:translateX(-30px);width:200px;">רן שלף</span> 
     <a href="#ourServices">השירותים שלנו</a>
     <a href="#">צור קשר</a>
@@ -55,7 +55,7 @@
     <div  class="sectionAlt">
       <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="30px">
         <h1 fxFlexAlign="center" style="padding:20px;">חקירות מובילות</h1>
-        <swiper class="slide" [config]="config" [(index)]="index1">
+        <swiper class="slide" [config]="config" >
          
          
         <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
@@ -150,7 +150,7 @@
     <div id="onMyself" class="sectionWhite"> 
       <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="30px">
         <h1 fxFlexAlign="center" style="padding:20px;">על עצמי</h1>
-        <mgl-timeline style="width:80%;direction: ltr;" [side]="right" fxFlexAlign="center" [alternate]="false">
+        <mgl-timeline style="width:80%;direction: ltr;"  fxFlexAlign="center" [alternate]="false">
           <mgl-timeline-entry>
               <mgl-timeline-entry-header>צבא ההגנה לישראל</mgl-timeline-entry-header>
               <mgl-timeline-entry-content style="direction:rtl">שירות צבאי המסתיים במעל ל-10 שנים כקצין מודיעין אוגדה במילואים ומפקד יחידה 
@@ -223,7 +223,7 @@
     <div class="sectionAlt">
       <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="30px">
         <h1 fxFlexAlign="center" style="padding:20px;">מספרים עלינו</h1>
-        <swiper class="slide" [config]="config2" [(index)]="index3">
+        <swiper class="slide" [config]="config2" >
          
          <div fxLayout="column" fxLayoutAlign="center center">
             <youtube-player  videoId="FBkOc82eTaA" >
@@ -287,7 +287,7 @@
     <div class="sectionAlt">
         <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="30px">
           <h1 fxFlexAlign="center" style="padding:20px;">צור קשר</h1>
-          <form [formGroup]="subscribeForm" novalidate (ngSubmit)="sendMail($event)">
+          <form [formGroup]="subscribeForm" novalidate (ngSubmit)="sendMail()">
               <input type="text" placeholder="Enter your email" formControlName="email"/>
               <button class="button margin-top-15" type="submit">Subscribe</button>
           </form>

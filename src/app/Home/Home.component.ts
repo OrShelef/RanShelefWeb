@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {SwiperConfigInterface} from 'ngx-swiper-wrapper';
 import { FormControl, FormGroup,Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-interface MailChimpResponse {
-  result: string;
-  msg: string;
-}
+import emailjs from 'emailjs-com';
+const templateParams = {
+  from_name: 'James',
+  to_name: 'James',
+  message_html: 'Check this out!'
+};
 @Component({
   selector: 'app-Home',
   templateUrl: './Home.component.html',
@@ -54,11 +56,12 @@ createForm() {
 }
 
 sendMail() {
-  if (this.subscribeForm.valid) {
-    console.log("assa");
-  
-      this.http.post("../email.php", {email:'ori9262317@gmail.com'}).subscribe();
-  }
+  emailjs.send('1','template_6QqoMkyF', templateParams, 'user_5LpnAAPNaorAos1nXsyIF')
+  .then((response) => {
+     console.log('SUCCESS!', response.status, response.text);
+  }, (err) => {
+     console.log('FAILED...', err);
+  });
 }
 
   ngOnInit() {
