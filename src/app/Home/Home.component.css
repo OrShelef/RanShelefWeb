@@ -1,0 +1,96 @@
+
+.bgImage{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+   
+    
+}
+
+mat-toolbar{
+    position: fixed;
+    background-color: transparent;
+
+}
+
+a{
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+span,mat-icon,a,p,button{
+    color:white;
+   
+}
+
+.mat-stroked-button:not([disabled]){
+    border-color: white;
+    font-size: 20px;
+    padding: 20px 70px 20px 70px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+   
+}
+
+.mat-stroked-button:not([disabled]):hover{
+   background: linear-gradient(to right,#E65100,#F57C00);
+   transform: scale(1.04)
+}
+
+h4{
+    line-height: 2;
+}
+
+.company{
+    width:17%;
+    height:100px;
+    margin: 20px;
+    transition: all 0.3s;
+}
+.company:hover{
+  transform: translateY(-7px);
+}
+.main{
+   
+  
+    margin-top: 5%;
+   
+    margin-right: 15%;
+    width: 55%;
+    height: 100%;
+    
+}
+
+.sectionWhite{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+
+}
+.sectionAlt{
+    width: 100%;
+    height: 100vh;
+   /* background: linear-gradient(to right,#212121,#424242);*/
+}
+
+.sectionAlt > div{
+    color: white;
+}
+.section2{
+    position: absolute;
+    top: 100vh;
+    width:100%;
+}
+
+.slide{
+    width:100%;
+    height: 60vh;
+}
+
+.fullSize{
+    height: 100%;
+    width: 100%;
+}
