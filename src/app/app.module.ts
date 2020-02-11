@@ -15,6 +15,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import {YouTubePlayerModule} from '@angular/youtube-player';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule,HttpClientJsonpModule } from '@angular/common/http';
+import { NgxSpinnerModule } from "ngx-spinner";
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
@@ -38,7 +39,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
       BrowserModule,
       AppRoutingModule,
       BrowserAnimationsModule,
-      MglTimelineModule
+      MglTimelineModule,
+      NgxSpinnerModule
 
    ],
    providers: [{

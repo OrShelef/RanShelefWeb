@@ -1,66 +1,51 @@
 
 
 
-<video autoplay muted loop class="bgImage">
+<video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" class="bgImage">
   <source src="../../assets/y2mate.com - cinematic_dark_video_backgroundfire_particleanimated_motion_backgroundfree_download_02_rha4jA5DboI_1080p.mp4" type="video/mp4">
    
 </video> 
 <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="0px">
-  <mat-toolbar >
+  <mat-toolbar fxHide.xs>
     <span style="transform:translateX(-30px);width:200px;">רן שלף</span> 
     <a href="#ourServices">השירותים שלנו</a>
     <a href="#">צור קשר</a>
     <a  [ngx-scroll-to]="'onMyself'">פרוייקטים</a>
   </mat-toolbar>
   
-  <div class="main" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="50px">
-    <p class="animated slideInRight slow" style="font-size:60px;">חברת חקירות רן שלף</p>
-    <p class="animated slideInRight slower" style="font-size:30px;">"ודָרַשְׁתָּ וְחָקַרְתָּ וְשָׁאַלְתָּ, הֵיטֵב; וְהִנֵּה אֱמֶת נָכוֹן הַדָּבָר"   דברים י"ג פסוק טו
+  <div class="main" [ngStyle.xs]="{'margin.px': 0}" [ngStyle.lg]="{'margin-right.%': 20}" fxLayout="column" fxLayoutAlign="center center" >
+    <img class="animated slideInRight slow"  fxFlexAlign="center" width="350px" style="z-index:1;margin-bottom:0px;" fxHide.gt-xs fxFlexAlign="center" height="350px" src="../../assets/Shelef Logo clear 1.png" alt="טוען">
+    <p class="animated slideInRight slow" fxHide.xs fxFlexAlign.xs="center" style="font-size:60px;">חברת חקירות רן שלף</p>
+    <p class="animated slideInRight slower" [ngStyle.xs]="{'font-size.px': 22,'padding.%':5}" style="font-size:30px;">"ודָרַשְׁתָּ וְחָקַרְתָּ וְשָׁאַלְתָּ, הֵיטֵב; וְהִנֵּה אֱמֶת נָכוֹן הַדָּבָר"   דברים י"ג פסוק טו
       </p>
-    <button [ngx-scroll-to]="'ourServices'" class="animated fadeInUp  slower" fxFlexAlign="end" mat-stroked-button >לפרטים נוספים</button>
+    <button [ngx-scroll-to]="'ourServices'" class="animated fadeInUp  slower"  mat-stroked-button >לפרטים נוספים</button>
   </div>
   
   <div id="ourServices" class="section2" fxLayout="column" fxLayoutAlign="start start" >
     <div     class="sectionWhite">
-      <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
-        <h1 fxFlexAlign="center" style="padding:20px;">השירותים שלנו</h1>
-       <div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="10px">
-         <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-          <mat-icon style="color:blueviolet;font-size: 120px;width:auto;height: auto;">
-            search
-          </mat-icon>
-          <p style="color:black">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-         </div>
-         <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-          <mat-icon style="color:blueviolet;font-size: 120px;width:auto;height: auto;">
-            search
-          </mat-icon>
-          <p style="color:black">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-         </div>
-         <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-          <mat-icon style="color:blueviolet;font-size: 120px;width:auto;height: auto;">
-            search
-          </mat-icon>
-          <p style="color:black">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-         </div>
-       </div>
+      <div fxLayout="column" fxLayoutAlign="start start" >
+       <img fxHide.xs fxFlexAlign="center" width="400px" height="400px" src="../../assets/Shelef Logo clear 1.png" alt="טוען">
+         <h2 fxFlexAlign="center" fxHide.lg fxHide.md fxHide.sm>קצת עלינו</h2>
+       <p [ngStyle.xs]="{'font-size.px': 18,'padding.%':5,'margin.%':0}" class="intro">חברת  "רן שלף – הדרכה, יעוץ וחקירת דליקות" הוקמה במטרה לשפר את הידע בתחומי האש בישראל, ליעץ בתחומי סיכוני האש ולחקור נסיבות פרוץ אירועי דליקה. 
+            החברה מתבססת על נסיון רב שנים של רן שלף בתחום חקירת אירועי דליקה, מדעי האש וניתוח נזקי האש:
+            רן פרש מן המשטרה לאחר 24 שנות עבודה, מהן 12 כראש המעבדה לחקירת הצתות, הקים מערך כבאות לאומי בכבאות והצלה לישראל אותו ניהל כראש מחלקת חקירות במשך כ- 8 שנים.  </p>
+            <p [ngStyle.xs]="{'font-size.px': 18,'padding.%':5,'margin.%':0}" class="intro" fxHide.xs>
+              במסגרת זו נוהלו באמצעות המחלקה, כ- 6,000 חקירות בשנה ובסך הכל סדר גודל של מעל ל- 30,000 חקירות.
+            רן מרצה מוביל באוניברסיטאות, במכללות, קורסים וימי עיון בתחומי האש עם ידע רב בחקירת זירת דליקה ועבודת מעבדה ביחד עם בניית תמונת מצב לאומית וקביעת האיומים והסיכונים למדינת ישראל בתחום האש.
+            החברה תתן מענה איכותי ברמה המקצועית הגבוהה ביותר במגוון רחב של תחומי חקירת דליקות, נזקי האש, יעוץ והדרכות מותאמות ללקוח.
+           
+            </p>
       </div>
     </div>
-    <div  class="sectionAlt">
+    <div ngClass.xs="sectionAltMobile" class="sectionAlt">
       <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="30px">
         <h1 fxFlexAlign="center" style="padding:20px;">חקירות מובילות</h1>
         <swiper class="slide" [config]="config" >
          
          
-        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap="50px">
          
-            <img fxFlex="30"  class="fullSize mat-elevation-z8" src="../../assets/Picture6.png">
+            <img fxFlex="30" fxHide.xs  class="fullSize mat-elevation-z8" src="../../assets/Picture6.png">
          
           <div style="padding-left:5%;padding-right:5%;" fxFlex="70">
             <h2>רצח בני משפחת אושרנקו</h2>
@@ -76,9 +61,9 @@
           </div>
          
         </div>
-        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap="50px">
          
-            <img fxFlex="30"  class="fullSize mat-elevation-z8" src="../../assets/Picture8.png">
+            <img fxFlex="30"  fxHide.xs class="fullSize mat-elevation-z8" src="../../assets/Picture8.png">
          
           <div style="padding-left:5%;padding-right:5%;" fxFlex="70">
             <h2>הדליקה ביערות הכרמל</h2>
@@ -98,9 +83,9 @@
           </div>
          
         </div> 
-        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap="50px">
          
-            <img fxFlex="30"  class="fullSize mat-elevation-z8" src="../../assets/Picture2.png">
+            <img fxFlex="30"  fxHide.xs class="fullSize mat-elevation-z8" src="../../assets/Picture2.png">
          
           <div style="padding-left:5%;padding-right:5%;" fxFlex="70">
             <h2>הצתת מרפאת שיניים בראש העין</h2>
@@ -118,9 +103,9 @@
           </div>
          
         </div> 
-        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap="50px">
          
-            <img fxFlex="30"  class="fullSize mat-elevation-z8" src="../../assets/Picture7.png">
+            <img fxFlex="30"  fxHide.xs  class="fullSize mat-elevation-z8" src="../../assets/Picture7.png">
          
           <div style="padding-left:5%;padding-right:5%;" fxFlex="70">
             <h2>אישום בהריגה בתאונת רכבי יוקרה</h2>
@@ -148,91 +133,40 @@
       </div>
     </div>
     <div id="onMyself" class="sectionWhite"> 
-      <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="30px">
+      <div fxLayout="column"  fxLayoutAlign="start start" fxLayoutGap="30px">
         <h1 fxFlexAlign="center" style="padding:20px;">על עצמי</h1>
-        <mgl-timeline style="width:80%;direction: ltr;"  fxFlexAlign="center" [alternate]="false">
-          <mgl-timeline-entry>
-              <mgl-timeline-entry-header>צבא ההגנה לישראל</mgl-timeline-entry-header>
-              <mgl-timeline-entry-content style="direction:rtl">שירות צבאי המסתיים במעל ל-10 שנים כקצין מודיעין אוגדה במילואים ומפקד יחידה 
+        <mgl-timeline  #ida style="width:80%;direction: ltr;"  fxFlexAlign="center" [toggle]="true" [alternate]="false">
+          <mgl-timeline-entry style="padding:0px;" *ngFor="let item of timeline" >
+              <mgl-timeline-entry-header >{{item.header}}</mgl-timeline-entry-header>
+              <mgl-timeline-entry-content style="direction:rtl"> {{item.content}}
               </mgl-timeline-entry-content>
               <mgl-timeline-entry-side>
                 <div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="20px">
-                    <p style="color:black;font-size:25px;">1978-2017</p>    
-                    <img style="width:60px;height: 60px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Badge_of_the_Israel_Defense_Forces.new.svg/1200px-Badge_of_the_Israel_Defense_Forces.new.svg.png">
+                    <p style="color:black;font-size:25px;">{{item.years}}</p>    
+                    <img style="width:60px;height: 60px;" src={{item.image}}>
                                  
                 </div>
                
               </mgl-timeline-entry-side>
               <mgl-timeline-entry-dot [size]="20"></mgl-timeline-entry-dot>
             
-          </mgl-timeline-entry>
-          <mgl-timeline-entry>
-              <mgl-timeline-entry-header>משטרת ישראל</mgl-timeline-entry-header>
-              <mgl-timeline-entry-content style="direction:rtl">שירות במז"פ/אגף החקירות בסופו מפקד במשך 12 שנים על המעבדה לחקירת הצתות
- 
-              </mgl-timeline-entry-content>
-              <mgl-timeline-entry-side>
-                <div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="20px">
-                    <p style="color:black;font-size:25px;">1988-2012</p>    
-                    <img style="width:60px;height: 60px;" src="https://police.gov.il/join/images/giyusLogo.svg">
-                                 
-                </div>
-               
-              </mgl-timeline-entry-side>
-              <mgl-timeline-entry-dot [size]="20"></mgl-timeline-entry-dot>
-            
-          </mgl-timeline-entry>
-          <mgl-timeline-entry>
-              <mgl-timeline-entry-header>כבאות והצלה לישראל</mgl-timeline-entry-header>
-              <mgl-timeline-entry-content style="direction:rtl">ראש מחלקת החקירות ומקים מערך החקירות ברשות הארצית לכבאות והצלה
-
- 
-              </mgl-timeline-entry-content>
-              <mgl-timeline-entry-side>
-                <div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="20px">
-                    <p style="color:black;font-size:25px;">2012-2019</p>    
-                    <img style="width:60px;height: 60px;" src="https://upload.wikimedia.org/wikipedia/he/6/68/FireDepIsrael.svg">
-                                 
-                </div>
-               
-              </mgl-timeline-entry-side>
-              <mgl-timeline-entry-dot [size]="20"></mgl-timeline-entry-dot>
-            
-          </mgl-timeline-entry>
-          <mgl-timeline-entry>
-              <mgl-timeline-entry-header>אוניברסיטת חיפה</mgl-timeline-entry-header>
-              <mgl-timeline-entry-content style="direction:rtl">מרצה בקורס ל"פיזיקה וכימיה של הבעירה", תואר שני ללימודי ניהול אסון עם התמחות במדעי האש/ החוג לגיאוגרפיה
-
-
- 
-              </mgl-timeline-entry-content>
-              <mgl-timeline-entry-side>
-                <div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="20px">
-                    <p style="color:black;font-size:25px;">2014-היום</p>    
-                    <img style="width:60px;height: 60px;" src="https://upload.wikimedia.org/wikipedia/he/thumb/d/d9/%D7%90%D7%95%D7%A0%D7%99%D7%91%D7%A8%D7%A1%D7%99%D7%98%D7%AA_%D7%97%D7%99%D7%A4%D7%94_-_%D7%A6%D7%91%D7%A2%D7%95%D7%A0%D7%99.svg/1200px-%D7%90%D7%95%D7%A0%D7%99%D7%91%D7%A8%D7%A1%D7%99%D7%98%D7%AA_%D7%97%D7%99%D7%A4%D7%94_-_%D7%A6%D7%91%D7%A2%D7%95%D7%A0%D7%99.svg.png">
-                                 
-                </div>
-               
-              </mgl-timeline-entry-side>
-              <mgl-timeline-entry-dot [size]="20"></mgl-timeline-entry-dot>
-            
-          </mgl-timeline-entry>
+          </mgl-timeline-entry>    
       </mgl-timeline>
       </div>
     </div>
-    <div class="sectionAlt">
-      <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="30px">
+    <div ngClass.xs="sectionAltMobile" class="sectionAlt">
+      <div fxLayout="column"  fxLayoutAlign="start start" fxLayoutGap="30px">
         <h1 fxFlexAlign="center" style="padding:20px;">מספרים עלינו</h1>
         <swiper class="slide" [config]="config2" >
          
          <div fxLayout="column" fxLayoutAlign="center center">
-            <youtube-player  videoId="FBkOc82eTaA" >
+            <youtube-player [width]="VideoWidth" [height]="VideoHeight" videoId="FBkOc82eTaA" >
           </youtube-player></div>
           <div fxLayout="column" fxLayoutAlign="center center">
-              <youtube-player  videoId="Xrcj2fcIvHI" >
+              <youtube-player [width]="VideoWidth" [height]="VideoHeight" videoId="Xrcj2fcIvHI" >
             </youtube-player></div>
             <div fxLayout="column" fxLayoutAlign="center center">
-                <youtube-player  videoId="KfIq1sTpUjc" >
+                <youtube-player [width]="VideoWidth" [height]="VideoHeight" videoId="KfIq1sTpUjc" >
               </youtube-player></div>
               <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="30px">
                   <h1 fxFlexAlign="center" style="padding:20px;">קישורים</h1>
@@ -248,49 +182,115 @@
       <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="20px">
         <h1 fxFlexAlign="center" style="padding:20px;">הלקוחות שלנו</h1>
         <div  fxLayout="row wrap"  fxLayoutAlign="center stretch">
-            <mat-card class="company mat-elevation-z8">
+            <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
               <img class="fullSize" src="../../assets/Picture9.png">
             </mat-card>
-             <mat-card class="company mat-elevation-z8">
+             <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
               <img class="fullSize" src="../../assets/Picture10.png">
               </mat-card> 
-              <mat-card class="company mat-elevation-z8">
+              <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
                 <img class="fullSize" src="../../assets/Picture11.png">
               </mat-card>
-              <mat-card class="company mat-elevation-z8">
+              <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
                   <img class="fullSize" src="../../assets/Picture12.png">
               </mat-card>
-              <mat-card class="company mat-elevation-z8">
+              <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
                   <img class="fullSize" src="../../assets/Picture13.png">
               </mat-card>
-              <mat-card class="company mat-elevation-z8">
+              <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
                   <img class="fullSize" src="../../assets/Picture14.png">
               </mat-card>
-              <mat-card class="company mat-elevation-z8">
+              <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
                   <img class="fullSize" src="../../assets/Picture15.png">
               </mat-card>
-              <mat-card class="company mat-elevation-z8">
+              <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
                   <img class="fullSize" src="../../assets/Picture16.png">
               </mat-card>
-              <mat-card class="company mat-elevation-z8">
+              <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
                   <img class="fullSize" src="https://che.org.il/wp-content/uploads/2012/07/tau4.png">
               </mat-card>
-              <mat-card class="company mat-elevation-z8">
+              <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
                   <img class="fullSize" src="https://www.huji.ac.il/huji/logos/HUJI_LogoHeb_hor.jpg">
               </mat-card>
-              <mat-card class="company mat-elevation-z8">
+              <mat-card [ngStyle.xs]="{'width.px': 80,'height.px':30,'margin.px':10}" class="company mat-elevation-z8">
                   <img class="fullSize" src="https://upload.wikimedia.org/wikipedia/he/6/6d/Shomera_Insurance_Logo.png">
               </mat-card>
         </div>
       </div>
     </div>
-    <div class="sectionAlt">
+    <div ngClass.xs="sectionAltMobile" class="sectionAlt">
         <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="30px">
           <h1 fxFlexAlign="center" style="padding:20px;">צור קשר</h1>
-          <form [formGroup]="subscribeForm" novalidate (ngSubmit)="sendMail()">
-              <input type="text" placeholder="Enter your email" formControlName="email"/>
-              <button class="button margin-top-15" type="submit">Subscribe</button>
-          </form>
+          <div style="width:100%;" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+              <form [formGroup]="subscribeForm" dir="rtl" fxFlex="60"  novalidate (ngSubmit)="sendMail()">
+                  <div style="margin-right:20%;" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+                      <mat-form-field color="white" appearance="fill">
+                          <mat-label>שם מלא</mat-label>
+                          <input style="color:black;" matInput formControlName="name" placeholder="שם מלא">
+                          <mat-icon style="color:black;"  matSuffix>supervised_user_circle</mat-icon>
+                          <mat-error *ngIf="name.invalid">שדה זה הינו חובה</mat-error>
+                        </mat-form-field>
+                        <mat-form-field  appearance="fill">
+                            <mat-label>אי-מייל</mat-label>
+                            <input style="color:black;" matInput formControlName="email" placeholder="אי-מייל">
+                            <mat-icon style="color:black;"  matSuffix>email</mat-icon>
+                            <mat-error *ngIf="email.invalid">שדה זה הינו חובה</mat-error>
+                          </mat-form-field>
+                          <mat-form-field  [ngStyle.xs]="{'height.px': 100,'width.px':250}" style="height:150px;width:400px" appearance="fill">
+                              <mat-label>תוכן</mat-label>
+                              <textarea [ngStyle.xs]="{'height.px': 100}"  style="color:black;height:150px;"  matInput formControlName="body" placeholder="תוכן"></textarea>
+                              
+                              <mat-error *ngIf="body.invalid">שדה זה הינו חובה</mat-error>
+                            </mat-form-field>
+                            <button  color="primary"  ngClass.xs="submitMobile" ngClass.gt-xs="submit"  mat-raised-button type="submit">שלח</button>
+                            <div fxHide.gt-xs fxLayout="row"  fxLayoutAlign="center center" fxLayoutGap="10px">
+                              <a mat-icon-button >
+                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="22" height="22"
+                                 viewBox="0 0 30 30"
+                                 style=" fill:white;">    <path d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z"></path></svg>
+                              </a>  
+                              <a mat-icon-button >
+                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="22" height="22"
+                                 viewBox="0 0 24 24"
+                                 style=" fill:white">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path></svg>
+                              </a>   
+                              <a mat-icon-button >
+                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="22" height="22"
+         viewBox="0 0 50 50"
+         style=" fill:white;"><path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path></svg>
+                              </a>          
+                             </div>
+                          </div> 
+               
+                </form> 
+                <div fxFlex="40" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+                    <h1 fxHide.xs fxFlexAlign="center" style="padding:20px;">חפשו אותנו</h1>
+                    <div fxHide.xs fxLayout="row"  fxLayoutAlign="center center" fxLayoutGap="10px">
+                     <a mat-raised-button class="socialButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="44" height="44"
+                        viewBox="0 0 30 30"
+                        style=" fill:white;">    <path d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z"></path></svg>
+                     </a>  
+                     <a mat-raised-button class="socialButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="44" height="44"
+                        viewBox="0 0 24 24"
+                        style=" fill:white">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path></svg>
+                     </a>   
+                     <a mat-raised-button class="socialButton lastButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="44" height="44"
+viewBox="0 0 50 50"
+style=" fill:white;"><path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path></svg>
+                     </a>          
+                    </div>
+                </div>
+          </div>
+         
       </div>
     </div>
 </div>

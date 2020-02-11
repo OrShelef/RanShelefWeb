@@ -3,3 +3,6 @@
 
 html, body { height: 100%;direction: rtl ;}
 body { margin: 0; font-family: Rubik, "Helvetica Neue", sans-serif; }
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: #f1f1f1;
+}

@@ -58,12 +58,49 @@ h4{
   
     margin-top: 5%;
    
-    margin-right: 15%;
-    width: 55%;
+    
+    width: 100%;
     height: 100%;
     
 }
+mat-form-field>input{
+    color: black;
+}
 
+.submit{
+    padding-top:20px;font-size:24px;padding-bottom:20px;padding-left:60px;padding-right:60px;margin-top:100px;
+margin-right:240px;
+}
+.submitMobile{
+    padding-top:20px;font-size:24px;padding-bottom:20px;padding-left:60px;padding-right:60px;margin-top:60px;
+
+}
+.lastButton{
+   margin-right: 10px;
+}
+
+.socialButton{
+    background-color:#FF9800;
+    padding:30px;
+    font-size:30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.socialButton:hover{
+    transform: scale(1.15);
+  
+}
+mgl-timeline{
+    padding: 0px;
+}
+.intro{
+    color:black;
+    line-height: 2;
+    font-size: 24px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: -20px;
+}
 .sectionWhite{
     width: 100%;
     height: 100vh;
@@ -73,9 +110,13 @@ h4{
 .sectionAlt{
     width: 100%;
     height: 100vh;
-   /* background: linear-gradient(to right,#212121,#424242);*/
+   background-color: #170707ed;
 }
-
+.sectionAltMobile{
+    width: 100%;
+    height: 100vh;
+   background-color: transparent;
+}
 .sectionAlt > div{
     color: white;
 }
