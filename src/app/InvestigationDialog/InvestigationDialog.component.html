@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>{{story.title}} </h1>
+<div mat-dialog-content>
+  <img src={{story.image}} width="75%" height="75%" style="position: relative;
+  left: 50%;
+  transform: translateX(-50%);" alt="">
+  <p>{{story.text}}</p> 
+</div>
+<div mat-dialog-actions >
+  <button mat-stroked-button color="primary"  (click)="onNoClick()">חזור</button>
+  
+</div>

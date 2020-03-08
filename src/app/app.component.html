@@ -11,4 +11,14 @@ type = "triangle-skew-spin"
 >
 <p style="color: white" > טוען... </p>
 </ngx-spinner>
-<router-outlet></router-outlet>
+<mat-toolbar fxHide.lt-md >
+        <img [ngx-scroll-to]="'main'" src="../../assets/Shelef Logo clear 1.png" style="transform:translateX(-30px);width: 110px; height: 60px; padding-left: 60px;cursor: pointer;">
+        <a [ngx-scroll-to]="'About'">השירותים שלנו</a>
+        <a [ngx-scroll-to]="'Projects'">חקירות</a>
+        <a [ngx-scroll-to]="'onMyself'">רקע</a>
+        <a [ngx-scroll-to]="'link'">קישורים</a>     
+        <a  [ngx-scroll-to]="'customer'">לקוחות</a>
+        <a [ngx-scroll-to]="'ContactUs'">צור קשר</a>
+      </mat-toolbar>
+    
+<router-outlet ></router-outlet>

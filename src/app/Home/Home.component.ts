@@ -1,9 +1,12 @@
-import { Component, OnInit,ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {SwiperConfigInterface} from 'ngx-swiper-wrapper';
 import { FormControl, FormGroup,Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { NgxSpinnerService } from "ngx-spinner";
 import emailjs from 'emailjs-com';
+import { Title, Meta } from '@angular/platform-browser';
+import {MatDialog} from '@angular/material/dialog';
+import { InvestigationDialogComponent } from '../InvestigationDialog/InvestigationDialog.component';
+import { SendMailDialogComponent } from '../SendMailDialog/SendMailDialog.component';
 
 @Component({
   selector: 'app-Home',
@@ -16,11 +19,14 @@ import emailjs from 'emailjs-com';
 export class HomeComponent implements OnInit,AfterViewInit {
   
  
+
   public subscribeForm: FormGroup;
     public email: FormControl;
     public name:FormControl;
     public body:FormControl;
-  constructor(private spinner: NgxSpinnerService) { }
+  constructor(private spinner: NgxSpinnerService,private _title: Title, private _meta: Meta,public dialog: MatDialog) { }
+ 
+ 
   public config: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
@@ -31,6 +37,7 @@ export class HomeComponent implements OnInit,AfterViewInit {
     navigation: true,
     pagination: false
   };
+
   public config2: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
@@ -38,8 +45,9 @@ export class HomeComponent implements OnInit,AfterViewInit {
     keyboard: true,
     mousewheel: false,
     scrollbar: false,
-    navigation: false,
-    pagination: true
+    navigation: true,
+    pagination:true,
+ 
   };
   index:number=0;
 
@@ -67,7 +75,14 @@ createForm() {
     });
 }
 
+isBusy:boolean=false;
 sendMail() {
+ this.isBusy=true;
+  if(!this.subscribeForm.valid)
+  { 
+    this.isBusy=false;
+    return;
+  }
   var params={
     from_name: this.name.value,
     to_name: 'רן שלף',
@@ -75,23 +90,35 @@ sendMail() {
   };
   emailjs.send('1','template_6QqoMkyF', params, 'user_5LpnAAPNaorAos1nXsyIF')
   .then((response) => {
-     console.log('SUCCESS!', response.status, response.text);
+    const dialogRef = this.dialog.open(SendMailDialogComponent, {
+      width: this.DialogSize,
+      height:"auto",
+      data: ""
+    });
+  
   }, (err) => {
-     console.log('FAILED...', err);
+   
+  }).finally(()=>{
+    this.isBusy=false;
   });
 }
-VideoWidth=600;
-VideoHeight=600;
+DialogSize="50%";
+
   ngOnInit() {
+   
+   
+    this._title.setTitle('רן שלף חקירות');
+    this._meta.updateTag({ name: 'description', content: 'This is the Home page!' });
     this.createFormControls();
     this.createForm();
     console.log(window.screen.width);
     
     if(window.screen.width<500)
     {
-      this.VideoWidth=300;
-      this.VideoHeight=300;
+      this.DialogSize="90%";
+    
     }
+  
     const tag = document.createElement('script');
 
     tag.src = "https://www.youtube.com/iframe_api";
@@ -126,6 +153,23 @@ VideoHeight=600;
   timeline;
   ngAfterViewInit(){
   this.spinner.hide();
+  
   }
  
+  openDialog(num:number): void {
+    const dialogRef = this.dialog.open(InvestigationDialogComponent, {
+      width: '95%',
+      height:'95%',
+      data: num
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+     
+    });
+  }
+
+ 
+
+
 }
+

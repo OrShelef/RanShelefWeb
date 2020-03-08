@@ -1,1 +1,23 @@
 
+
+
+.black{
+    background: black;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+  
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  mat-toolbar{
+    position: fixed;
+    background: linear-gradient(to right,#1B3044,#071A29);
+    z-index: 999;
+
+}

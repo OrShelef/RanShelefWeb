@@ -12,4 +12,8 @@ export class AppComponent implements OnInit {
     this.spinner.show();
     
   }
+
+  onClick(){
+    alert("ds");
+  }
 }
